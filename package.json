@@ -1,13 +1,16 @@
 {
   "name": "tsonlang",
-  "displayName": "tsonlang",
-  "description": "Add Tson Consfiguration`s syntax support",
-  "version": "0.0.2",
+  "displayName": "Tson Lang",
+  "description": "Add Tson Consfigurations syntax support",
+  "version": "0.0.4",
   "engines": {
-    "vscode": "^1.90.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
-    "Programming Languages"
+    "Languages",
+    "Configurations",
+    "Tson",
+    "Tson Configurations"
   ],
   "contributes": {
     "languages": [{
