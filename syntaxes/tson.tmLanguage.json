@@ -1,0 +1,114 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Tson Configurations",
+	"patterns": [
+		{"include": "#map"},
+		{"include": "#line-comment"}
+	],
+	"repository": {
+		"map":{
+			"patterns": [
+				{
+					"name": "storage",
+					"begin": "{",
+					"end": "}",
+					"patterns": [
+						{"include": "#line-comment"},
+						{"include": "#keywords"},
+						{"include": "#boolean"},
+						{"include": "#number"},
+						{"include": "#string"},
+						{"include": "#string2"},
+						{
+							"name": "keyword.other.unit",
+							"begin": "[a-zA-Z0-9]",
+							"end": "[a-zA-Z0-9]{1,}[\\s,\\'=']"
+						},
+						{"include": "#map"},
+						{"include": "#list"},
+						{
+							"name": "keyword.operator",
+							"match": "[',','=']"
+						}
+					],
+					"beginCaptures": {
+						"0": { "name": "punctuation.paren.open" }
+					},
+					"endCaptures": {
+						"0": { "name": "punctuation.paren.close" }
+					}
+				}
+			]
+		},
+
+		"list":{
+			"patterns": [
+				{
+					"name": "storage",
+					"begin": "\\[",
+					"end": "\\]",
+					"patterns": [
+						{"include": "#line-comment"},
+						{"include": "#boolean"},
+						{"include": "#number"},
+						{"include": "#list"},
+						{"include": "#map"},
+						{"include": "#string"},
+						{"include": "#string2"},
+						{
+							"name": "keyword.control",
+							"match": "[',']"
+						}
+					],
+					"beginCaptures": {
+						"0": { "name": "punctuation.paren.open" }
+					},
+					"endCaptures": {
+						"0": { "name": "punctuation.paren.close" }
+					}
+				}
+			]
+		},
+
+		"boolean":{
+			"name": "keyword.control",
+			"match": "['T','t']rue|['F','f']alse"
+		},
+
+		"number":{
+			"name": "keyword.control",
+			"match": "[0-9]{1,}"
+		},
+		
+		"string": {
+			"name": "string.quoted.double.tson",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tson",
+					"match": "\\\\."
+				}
+			]
+		},
+
+		"string2": {
+			"name": "string.quoted.double.tson",
+			"begin": "\\'",
+			"end": "\\'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tson",
+					"match": "\\\\."
+				}
+			]
+		},
+
+		"line-comment":{
+			"name": "comment.line",
+			"begin": "//",
+			"end": "\n"
+		}
+	},
+	"scopeName": "source.tson"
+}
