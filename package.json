@@ -2,12 +2,12 @@
   "name": "tsonlang",
   "displayName": "Tson Lang",
   "description": "Add Tson Consfigurations syntax support",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
-    "Languages",
+    "Programming Languages",
     "Configurations",
     "Tson",
     "Tson Configurations"
