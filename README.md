@@ -5,5 +5,13 @@ Simple plugin to support
 
 ## Building
 
-1) install `npm install -g @vscode/vsce`
-2) run `build.bat`
+1) Install `npm install -g @vscode/vsce`
+2) Run `build.bat`
+
+## Installing
+
+1) Get release or build extension to `.vsix`
+2) Install plugin from `vsix`
+
+### Downloads
+[https://github.com/Te4hnoPlus/TsonLangVS/releases/download/pre/tsonlang-0.0.4.vsix](TsonLang-0.0.4.vsix)
