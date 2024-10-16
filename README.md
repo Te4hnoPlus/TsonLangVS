@@ -14,4 +14,4 @@ Simple plugin to support
 2) Install plugin from `vsix`
 
 ### Downloads
-[https://github.com/Te4hnoPlus/TsonLangVS/releases/download/pre/tsonlang-0.0.4.vsix](TsonLang-0.0.4.vsix)
+[Tson Lang-0.0.4.vsix](https://github.com/Te4hnoPlus/TsonLangVS/releases/download/pre/tsonlang-0.0.4.vsix)
