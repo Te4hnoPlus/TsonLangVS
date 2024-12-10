@@ -106,7 +106,23 @@
 				{
 					"name": "constant.character.escape.tson",
 					"match": "\\\\."
-				}
+				},
+				{"include": "#mc-0"},
+				{"include": "#mc-1"},
+				{"include": "#mc-2"},
+				{"include": "#mc-3"},
+				{"include": "#mc-4"},
+				{"include": "#mc-5"},
+				{"include": "#mc-6"},
+				{"include": "#mc-7"},
+				{"include": "#mc-8"},
+				{"include": "#mc-9"},
+				{"include": "#mc-A"},
+				{"include": "#mc-B"},
+				{"include": "#mc-C"},
+				{"include": "#mc-D"},
+				{"include": "#mc-E"},
+				{"include": "#mc-F"}
 			]
 		},
 
@@ -126,7 +142,73 @@
 			"name": "comment.line",
 			"begin": "//",
 			"end": "\n"
+		},
+
+		"mc-0":{
+			"name": "tson.mc0",
+			"match": "§0+([^§\"]{1,})"
+		},
+		"mc-1":{
+			"name": "tson.mc1",
+			"match": "§1+([^§\"]{1,})"
+		},
+		"mc-2":{
+			"name": "tson.mc2",
+			"match": "§2+([^§\"]{1,})"
+		},
+		"mc-3":{
+			"name": "tson.mc3",
+			"match": "§3+([^§\"]{1,})"
+		},
+		"mc-4":{
+			"name": "tson.mc4",
+			"match": "§4+([^§\"]{1,})"
+		},
+		"mc-5":{
+			"name": "tson.mc5",
+			"match": "§5+([^§\"]{1,})"
+		},
+		"mc-6":{
+			"name": "tson.mc6",
+			"match": "§6+([^§\"]{1,})"
+		},
+		"mc-7":{
+			"name": "tson.mc7",
+			"match": "§7+([^§\"]{1,})"
+		},
+		"mc-8":{
+			"name": "tson.mc8",
+			"match": "§8+([^§\"]{1,})"
+		},
+		"mc-9":{
+			"name": "tson.mc9",
+			"match": "§9+([^§\"]{1,})"
+		},
+		"mc-A":{
+			"name": "tson.mcA",
+			"match": "§a+([^§\"]{1,})"
+		},
+		"mc-B":{
+			"name": "tson.mcB",
+			"match": "§b+([^§\"]{1,})"
+		},
+		"mc-C":{
+			"name": "tson.mcC",
+			"match": "§c+([^§\"]{1,})"
+		},
+		"mc-D":{
+			"name": "tson.mcD",
+			"match": "§d+([^§\"]{1,})"
+		},
+		"mc-E":{
+			"name": "tson.mcE",
+			"match": "§e+([^§\"]{1,})"
+		},
+		"mc-F":{
+			"name": "tson.mcF",
+			"match": "§f+([^§\"]{1,})"
 		}
+
 	},
 	"scopeName": "source.tson"
 }

@@ -23,6 +23,30 @@
       "language": "tson",
       "scopeName": "source.tson",
       "path": "./syntaxes/tson.tmLanguage.json"
-    }]
+    }],
+    
+    "configurationDefaults": {
+      "editor.insertSpaces": false,
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {"scope": "tson.mc0","settings": {"foreground": "#000000"}},
+          {"scope": "tson.mc1","settings": {"foreground": "#0000AA"}},
+          {"scope": "tson.mc2","settings": {"foreground": "#00AA00"}},
+          {"scope": "tson.mc3","settings": {"foreground": "#00AAAA"}},
+          {"scope": "tson.mc4","settings": {"foreground": "#AA0000"}},
+          {"scope": "tson.mc5","settings": {"foreground": "#AA00AA"}},
+          {"scope": "tson.mc6","settings": {"foreground": "#FFAA00"}},
+          {"scope": "tson.mc7","settings": {"foreground": "#AAAAAA"}},
+          {"scope": "tson.mc8","settings": {"foreground": "#555555"}},
+          {"scope": "tson.mc9","settings": {"foreground": "#5555FF"}},
+          {"scope": "tson.mcA","settings": {"foreground": "#55FF55"}},
+          {"scope": "tson.mcB","settings": {"foreground": "#55FFFF"}},
+          {"scope": "tson.mcC","settings": {"foreground": "#FF5555"}},
+          {"scope": "tson.mcD","settings": {"foreground": "#FF55FF"}},
+          {"scope": "tson.mcE","settings": {"foreground": "#FFFF55"}},
+          {"scope": "tson.mcF","settings": {"foreground": "#FFFFFF"}}
+        ]
+      }
+    }
   }
 }
