@@ -21,9 +21,9 @@
 						{"include": "#string"},
 						{"include": "#string2"},
 						{
-							"name": "keyword.other.unit",
+							"name": "entity.other.attribute-name",
 							"begin": "[a-zA-Z0-9]",
-							"end": "[a-zA-Z0-9]{1,}[\\s,\\'=',\\'}']"
+							"end": "[a-zA-Z0-9]{0,}[\\s,\\'=',\\'{}[]()']"
 						},
 						{"include": "#map"},
 						{"include": "#list"},
@@ -50,18 +50,20 @@
 					"end": "\\]",
 					"patterns": [
 						{"include": "#line-comment"},
+						{
+							"name": "keyword.operator",
+							"match": "\\,"
+						},
 						{"include": "#keyword"},
+						{"include": "#keyword-new"},
 						{"include": "#boolean"},
 						{"include": "#number"},
 						{"include": "#list"},
 						{"include": "#map"},
+						
 						{"include": "#primitive"},
 						{"include": "#string"},
-						{"include": "#string2"},
-						{
-							"name": "keyword.control",
-							"match": "[',']"
-						}
+						{"include": "#string2"}
 					],
 					"beginCaptures": {
 						"0": { "name": "punctuation.paren.open" }
@@ -88,14 +90,36 @@
 			"begin": "\\(",
 			"end": "\\)",
 			"patterns": [
+				{"include": "#line-comment"},
+				{"include": "#keyword"},
+				{"include": "#keyword-new"},
 				{"include": "#boolean"},
-				{"include": "#number"}
+				{"include": "#number"},
+				{"include": "#list"},
+				{"include": "#map"},
+				{"include": "#primitive"},
+				{"include": "#string"},
+				{"include": "#string2"},
+				{
+					"name": "keyword.operator",
+					"match": "\\,"
+				}
 			]
 		},
 
 		"keyword":{
+			"name": "keyword.operator.noexcept",
+			"match": "func"
+		},
+
+		"keyword-new":{
 			"name": "keyword.operator.new",
-			"match": "new|func"
+			"begin": "new ",
+			"end": "\\(",
+			"patterns": [
+				{"name": "keyword.operator", "match": "\\."},
+				{"name": "keyword.other.unit", "match": "[a-zA-Z0-9]"}
+			]
 		},
 		
 		"string": {
